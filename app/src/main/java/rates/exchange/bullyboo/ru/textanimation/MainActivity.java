@@ -15,8 +15,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import ru.bullyboo.text_animation.AlphaBuilder;
-import ru.bullyboo.text_animation.AnimationBuilder;
 import ru.bullyboo.text_animation.TextCounter;
 
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener,
@@ -90,25 +88,8 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         builder.setTextView(textView);
 
         textView.setVisibility(View.VISIBLE);
-
-        AnimationBuilder modeBuilder = AnimationBuilder.newBuilder()
-                .addPart(1000, 60)
-                .addPart(1000, 60, 100)
-                .addPart(1000, 100, AlphaBuilder.newInstance().fromAlpha(1f).toAlpha(0f))
-                .addPart(1000, 100, 60, AlphaBuilder.newInstance().fromAlpha(0f).toAlpha(1f))
-                .build();
-//
-        /*TextAnimator animator = */TextCounter.newBuilder()
-                .setTextView(textView)
-                .setType(TextCounter.LONG)
-                .setCustomAnimation(modeBuilder)
-                .from(100l)
-                .to(1000l).build().start();
-
-//        animator.start();
     }
 
-//    TextAnimator animator;
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
         setChecking();
@@ -198,7 +179,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
                 getFromTo();
             } catch (NumberFormatException e) {
                 e.printStackTrace();
-                Toast.makeText(this, "Неправильное значения для этого типа", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Error number for this type", Toast.LENGTH_LONG).show();
             }
         } else if(view.getId() == R.id.swipe){
             String fromText = from.getText().toString();
