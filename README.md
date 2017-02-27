@@ -3,10 +3,22 @@ Animation of text counter
 
 ## Download
 Gradle:
+``` groovy 
+compile 'ru.bullyboo.animation:text_counter:1.0.0'
+```
 
 Maven:
+``` xml
+<dependency> 
+  <groupId>ru.bullyboo.animation</groupId> 
+  <artifactId>text_counter</artifactId> 
+  <version>1.0.0</version> 
+  <type>pom</type> 
+</dependency>
+```
 
 ## Samples
+Apk of [Demo version](https://github.com/BullyBoo/TextCounter/releases/download/1.0.0/app-debug.apk)
 
 ## Usage
 To use text counter you need call `TextAnimator.newBuilder()` and set properties of animation.
@@ -32,22 +44,11 @@ You need to set TextView. which will show text animaton of counter.
 `from();` and `to();`
 These methods supports with:
 ```
-byte
-short
-int
-float
-long
-double
+byte, short, int, float, long, double
 
 and 
 
-Byte
-Short
-Integer
-Float
-Long
-Double
-String
+Byte, Short, Integer, Float, Long, Double, String
 ```
 
 You also can directly set Typt of numbers, which will use in counter. Use `setType();` method for.
@@ -127,3 +128,18 @@ Fourth: `duration`, `fromFps`, `toFps`, and AlphaBuilder, which will create alph
 You can create all what you want with method `setCustomAnimation();`.
 
 ## License
+```
+  Copyright (C) 2017 BullyBoo
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  ```
