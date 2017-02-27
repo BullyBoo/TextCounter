@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TextAnimation</string>
+
+    <string-array name="modes">
+        <item>LINEAR_MODE</item>
+        <item>LINEAR_ACCELERATION_MODE</item>
+        <item>LINEAR_DECELERATION_MODE</item>
+
+        <item>DECELERATION_MODE</item>
+        <item>DECELERATION_LINEAR_MODE</item>
+        <item>DECELERATION_ACCELERATION_MODE</item>
+
+        <item>ACCELERATION_MODE</item>
+        <item>ACCELERATION_LINEAR_MODE</item>
+        <item>ACCELERATION_DECELERATION_MODE</item>
+
+        <item>LINEAR_TO_ALPHA_MODE</item>
+        <item>LINEAR_FROM_ALPHA_MODE</item>
+
+        <item>DECELERATION_TO_ALPHA_MODE</item>
+        <item>DECELERATION_FROM_ALPHA_MODE</item>
+
+        <item>ACCELERATION_TO_ALPHA_MODE</item>
+        <item>ACCELERATION_FROM_ALPHA_MODE</item>
+    </string-array>
+</resources>
