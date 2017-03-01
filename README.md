@@ -4,7 +4,7 @@ Animation of text counter
 ## Download
 Gradle:
 ``` groovy 
-compile 'ru.bullyboo.animation:text_counter:1.0.0'
+compile 'ru.bullyboo.animation:text_counter:1.0.1'
 ```
 
 Maven:
@@ -12,7 +12,7 @@ Maven:
 <dependency> 
   <groupId>ru.bullyboo.animation</groupId> 
   <artifactId>text_counter</artifactId> 
-  <version>1.0.0</version> 
+  <version>1.0.1</version> 
   <type>pom</type> 
 </dependency>
 ```
