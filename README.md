@@ -24,7 +24,7 @@ Apk of [Demo version](https://github.com/BullyBoo/TextCounter/releases/download/
 To use text counter you need to call `TextAnimator.newBuilder()` and set properties of animation.
 For example:
 ``` java
-TextAnimator.newBuilder()
+TextCounter.newBuilder()
                 .setTextView(textView)
                 .setType(TextAnimator.LONG)
                 .setCustomAnimation(modeBuilder)
@@ -110,7 +110,7 @@ AnimationBuilder modeBuilder = AnimationBuilder.newBuilder()
                 .addPart(1000, 100, 60, AlphaBuilder.newInstance().fromAlpha(0f).toAlpha(1f))
                 .build();
                 
-TextAnimator animator = TextCounter.newBuilder()
+TextCounter animator = TextCounter.newBuilder()
                 .setTextView(textView)
                 .setCustomAnimation(modeBuilder)
                 .from(0d)
