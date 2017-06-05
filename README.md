@@ -21,12 +21,12 @@ Maven:
 Apk of [Demo version](https://github.com/BullyBoo/TextCounter/releases/download/1.0.0/app-debug.apk)
 
 ## Usage
-To use text counter you need to call `TextAnimator.newBuilder()` and set properties of animation.
+To use text counter you need to call `TextCounter.newBuilder()` and set properties of animation.
 For example:
 ``` java
 TextCounter.newBuilder()
                 .setTextView(textView)
-                .setType(TextAnimator.LONG)
+                .setType(TextCounter.LONG)
                 .setCustomAnimation(modeBuilder)
                 .from(100l)
                 .to(1000l)
