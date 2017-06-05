@@ -34,7 +34,7 @@ TextCounter.newBuilder()
                 .start();
 ```
 
-The main method of TextAnimation Builder is `setTextView();`, `from();`, `to();` and `setDuration();`. It's will not working without this.
+The main method of TextCounter Builder is `setTextView();`, `from();`, `to();` and `setDuration();`. It's will not working without this.
 
 ## Methods
 
