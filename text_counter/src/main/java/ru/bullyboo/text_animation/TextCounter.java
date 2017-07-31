@@ -148,6 +148,15 @@ public class TextCounter{
      * false - animation isn`t playing now
      */
     private boolean isAnimate = false;
+	
+	/**
+	 * TextCounter listener
+	 */
+	public interface TextCounterListener {
+		void onEnd();
+	}
+	
+	private TextCounterListener listener;
 
     private TextCounter(){
 
@@ -229,7 +238,6 @@ public class TextCounter{
     private void changeText(String current){
         switch (type){
             case BYTE:
-
                 textView.setText(prefix + currentNumber.byteValue() + postfix);
                 break;
             case SHORT:
@@ -275,6 +283,10 @@ public class TextCounter{
             default:
                 return;
         }
+		
+		if(listener != null) {
+			listener.onEnd();
+		}
     }
 
     public class Builder{
@@ -513,6 +525,11 @@ public class TextCounter{
             TextCounter.this.partList = partList;
             return this;
         }
+		
+		public Builder setListener(TextCounterListener listener) {
+			TextCounter.this.listener = listener;
+			return this;
+		}
 
         public TextCounter build(){
 
