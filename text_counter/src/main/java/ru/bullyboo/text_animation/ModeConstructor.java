@@ -21,7 +21,7 @@ import android.support.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.List;
 
-class ModeConstuctor {
+class ModeConstructor {
 
     private float[] alphaDynamic;
 
@@ -289,6 +289,10 @@ class ModeConstuctor {
         float midleTimePause = (fromTimePause + toTimePause)/ 2;
 
         int amountFrames = (int)(duration/midleTimePause);
+        if(amountFrames == 0){
+            amountFrames = 1;
+        }
+
         float stepFps = toTimePause - fromTimePause;
 
         stepFps = stepFps/amountFrames;

@@ -484,6 +484,11 @@ public class TextCounter{
             return this;
         }
 
+        public Builder setDecimalFormat(DecimalFormat decimalFormat){
+            TextCounter.this.decimalFormat = decimalFormat;
+            return this;
+        }
+
         public Builder setFromFps(int fromFps){
             TextCounter.this.fromFps = fromFps;
             return this;
@@ -516,7 +521,7 @@ public class TextCounter{
 
         public TextCounter build(){
 
-            ModeConstuctor constuctor = buildFpsDynamic(new ModeConstuctor());
+            ModeConstructor constuctor = buildFpsDynamic(new ModeConstructor());
             buildAlphaDynamic(constuctor);
 
             buildType();
@@ -572,7 +577,7 @@ public class TextCounter{
         }
 
 
-        private ModeConstuctor buildFpsDynamic(ModeConstuctor constuctor){
+        private ModeConstructor buildFpsDynamic(ModeConstructor constuctor){
 
             if(partList != null){
                 fpsDynamic = constuctor.buildFpsDynamic(partList.getFpsList());
@@ -607,7 +612,7 @@ public class TextCounter{
             }
         }
 
-        private void buildAlphaDynamic(ModeConstuctor constuctor){
+        private void buildAlphaDynamic(ModeConstructor constuctor){
             if(partList != null){
                 alphaDynamic = constuctor.buildAlphaDynamic(partList.getFpsList());
 

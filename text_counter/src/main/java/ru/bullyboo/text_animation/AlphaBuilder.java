@@ -50,6 +50,9 @@ public class AlphaBuilder {
 
     protected float[] createAlphaDynamic(int arraySize){
 
+        if(arraySize == 0){
+            return null;
+        }
         float[] alphaDynamic = new float[arraySize];
 
         float step = (toAlpha - fromAlpha)/arraySize;
